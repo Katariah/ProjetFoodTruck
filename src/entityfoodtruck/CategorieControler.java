@@ -1,6 +1,5 @@
 package entityfoodtruck;
 
-import entityfoodtruck.model.Article;
 import entityfoodtruck.model.Categorie;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -12,12 +11,9 @@ import javax.persistence.Query;
  *
  * @author Fanny
  */
-public class GestionCategorie {
+public class CategorieControler {
 
-    public static void createCategorie(String nomCat) {
-        Categorie c = new Categorie();
-        c.setNomCat(nomCat);
-
+    public static void createCategorie(Categorie c) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("EntityFoodTruckPU");
         EntityManager em = emf.createEntityManager();
         EntityTransaction transac = em.getTransaction();

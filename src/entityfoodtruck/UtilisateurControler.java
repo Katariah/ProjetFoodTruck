@@ -11,21 +11,9 @@ import javax.persistence.Query;
  *
  * @author Fanny
  */
-public class GestionUtilisateur {
+public class UtilisateurControler {
 
-    public static void createUser(String nomUser, String prenomUser, String adresse, int codePostal, String ville, String mail, String mdp, String tel, String typeCompte) {
-        Utilisateur u = new Utilisateur();
-        u.setNomUser(nomUser);
-        u.setPrenomUser(prenomUser);
-        u.setAdresse(adresse);
-        u.setCodePostal(codePostal);
-        u.setVille(ville);
-        u.setMail(mail);
-//        if mail déjà pris => error rerentrer mail
-        u.setMdp(mdp);
-        u.setTel(tel);
-        u.setTypeCompte(typeCompte);
-
+    public static void createUser(Utilisateur u) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("EntityFoodTruckPU");
         EntityManager em = emf.createEntityManager();
         EntityTransaction transac = em.getTransaction();

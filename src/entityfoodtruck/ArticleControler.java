@@ -2,7 +2,6 @@ package entityfoodtruck;
 
 import entityfoodtruck.model.Article;
 import entityfoodtruck.model.Categorie;
-import entityfoodtruck.model.Utilisateur;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -13,16 +12,9 @@ import javax.persistence.Query;
  *
  * @author Fanny
  */
-public class GestionArticle {
+public class ArticleControler {
 
-    public static void createArticle(String nomArticle, String descriptionArticle, float prixArticle, String urlArticle, Categorie idCat) {
-        Article a = new Article();
-        a.setNomArticle(nomArticle);
-        a.setDescriptionArticle(descriptionArticle);
-        a.setPrixArticle(prixArticle);
-        a.setUrlArticle(urlArticle);
-        a.setIdCat(idCat);
-
+    public static void createArticle(Article a) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("EntityFoodTruckPU");
         EntityManager em = emf.createEntityManager();
         EntityTransaction transac = em.getTransaction();
