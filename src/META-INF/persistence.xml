@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="EntityFoodTruckPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>entityfoodtruck.Commande</class>
+    <class>entityfoodtruck.Menu</class>
+    <class>entityfoodtruck.Utilisateur</class>
+    <class>entityfoodtruck.Article</class>
+    <class>entityfoodtruck.Categorie</class>
+    <class>entityfoodtruck.model.Article</class>
+    <class>entityfoodtruck.model.Utilisateur</class>
+    <class>entityfoodtruck.model.CContientM</class>
+    <class>entityfoodtruck.model.Menu</class>
+    <class>entityfoodtruck.model.CContientA</class>
+    <class>entityfoodtruck.model.Commande</class>
+    <class>entityfoodtruck.model.Categorie</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mydb?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="Fanny"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="foodtruck"/>
+    </properties>
+  </persistence-unit>
+</persistence>
