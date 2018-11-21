@@ -1,4 +1,7 @@
 # ProjetFoodTruck
+
+Modification Issame 
+
 Git pour un projet d'appli web. Cette appli permettra de commander à un foodtruck afin de retirer sa commande à une heure précise et éviter ainsi l'attente.
 
 Le projet est réalisé dans le cadre d'une POE Java-Angular à l'EPSI Montpellier.
